@@ -1,0 +1,36 @@
+<!-- user-registration.component.html -->
+<div class="flex min-h-screen justify-center items-center">
+        <div class="mx-auto w-96">
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="border border-gray-300 p-4">
+                <h2 class="text-2xl font-bold mb-4">User Registration</h2>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                    <input id="name" type="text" formControlName="name" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    @if (isNameInvalid()) {
+
+                            <div class="text-red-500 text-sm mt-1">Name is required</div>
+                    }
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input id="email" type="email" formControlName="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    @if (isEmailFormatInvalid()) {
+                            <div class="text-red-500 text-sm mt-1">
+                                @if (isEmailRequired()) {
+
+                                        <div>Email is required</div>
+                                }
+                                @else if (isEmailFormatInvalid()) {
+
+                                        <div>Invalid email format</div>
+                                }   
+                            </div>
+                            
+                    }
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
