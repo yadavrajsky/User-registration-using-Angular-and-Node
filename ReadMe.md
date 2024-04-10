@@ -1,4 +1,4 @@
-# User registration using NodeJS and Angular
+# 🌟 User Registration using NodeJS and Angular 🌟
 
 ## Backend Setup
 
@@ -55,5 +55,5 @@ To run the frontend, follow these steps:
 
 Access the web at `http://localhost:4200`.
 
-For registration, go to: `http://localhost:4200/register`.
-To view the users, go to: `http://localhost:4200/fetch`.
+For registration, go to: [📝 Register](http://localhost:4200/register).
+To view the users, go to: [👀 View Users](http://localhost:4200/fetch).
